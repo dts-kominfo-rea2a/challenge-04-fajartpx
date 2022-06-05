@@ -8,7 +8,25 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+// const createDate = null;
+
+function createDate (param,index) {
+  let date= [];
+  for(let counter=0;counter<param.length;counter++){
+     date.push(Date.parse(param[counter])/1000);
+    //  dateSecond = Date.parse(date/1000);
+  }
+   switch(index) {
+    case undefined:
+        return date.sort().join("-");
+        break;
+    case index:
+        return date[index].toString();
+        break;
+    default:
+        console.log("Tidak ada data");
+  }
+}
 
 // ! JANGAN DIMODIFIKASI
 (() => {
